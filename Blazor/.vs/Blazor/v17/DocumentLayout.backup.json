@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\Blazor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\blazor\\blazor\\wwwroot\\css\\products.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\wwwroot\\css\\products.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\blazor\\blazor\\pages\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\blazor\\blazor\\pages\\productdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\productdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Products.razor",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\Pages\\Products.razor",
+              "RelativeDocumentMoniker": "Blazor\\Pages\\Products.razor",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\Pages\\Products.razor",
+              "RelativeToolTip": "Blazor\\Pages\\Products.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T19:33:30.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDetails.razor",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\Pages\\ProductDetails.razor",
+              "RelativeDocumentMoniker": "Blazor\\Pages\\ProductDetails.razor",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\Pages\\ProductDetails.razor",
+              "RelativeToolTip": "Blazor\\Pages\\ProductDetails.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T19:33:22.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "products.css",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\wwwroot\\css\\products.css",
+              "RelativeDocumentMoniker": "Blazor\\wwwroot\\css\\products.css",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\wwwroot\\css\\products.css",
+              "RelativeToolTip": "Blazor\\wwwroot\\css\\products.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFMAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T19:16:51.213Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

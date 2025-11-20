@@ -1,0 +1,31 @@
+﻿@page "/product/{id:int}"
+
+@using Blazor.Data
+@using Microsoft.AspNetCore.Components
+
+<PageTitle>Product Details</PageTitle>
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Product? product;
+
+    protected override void OnInitialized()
+    {
+        product = ProductStore.Products.Find(p => p.Id == id);
+    }
+}
+
+@if (product == null)
+{
+    <h2>Product not found</h2>
+    <NavLink href="/products">Return</NavLink>
+}
+else
+{
+    <div class="product-details">
+        <h1>@product.Name</h1>
+        <p>@product.Description</p>
+        <p><strong>Price:</strong> @product.Price.ToString("C")</p>
+        <NavLink href="/products">Return</NavLink>
+    </div>
+}

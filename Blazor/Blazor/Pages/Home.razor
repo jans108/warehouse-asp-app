@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Welcome to our store</h1>
+
+@using Blazor.Data
+
+<div class="product-windows">
+    @foreach (var p in ProductStore.Products)
+    {
+        <div class="product-window">
+            <h2>@p.Name</h2>
+            <p>@p.ShortDescription</p>
+            <NavLink class="btn" href=@($"/product/{p.Id}")>See more</NavLink>
+        </div>
+    }
+</div>

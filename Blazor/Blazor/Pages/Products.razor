@@ -1,0 +1,22 @@
+﻿@page "/products"
+
+<PageTitle>Products</PageTitle>
+
+@using Blazor.Data
+
+<h1>All products</h1>
+
+<ul class="product-list">
+    @foreach (var p in ProductStore.Products)
+    {
+        <li>
+            <h3>@p.Name</h3>
+            <p>@p.ShortDescription</p>
+            <NavLink href="@($"/product/{p.Id}")">See more</NavLink>
+        </li>
+    }
+</ul>
+
+@code {
+
+}
