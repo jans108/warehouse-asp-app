@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\Blazor\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\blazor\\blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\warehouse-asp-app\\blazor\\blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\Pages\\Home.razor",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Blazor\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\Blazor\\Blazor\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Home.razor",
               "RelativeToolTip": "Blazor\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
