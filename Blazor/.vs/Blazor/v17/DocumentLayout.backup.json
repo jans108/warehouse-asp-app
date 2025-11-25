@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\warehouse-asp-app\\blazor\\blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\admin\\source\\repos\\warehouse-asp-app\\blazor\\blazor\\pages\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\products.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Products.razor",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Products.razor",
+              "RelativeDocumentMoniker": "Blazor\\Pages\\Products.razor",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Products.razor",
+              "RelativeToolTip": "Blazor\\Pages\\Products.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T17:53:54.939Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +41,9 @@
               "RelativeDocumentMoniker": "Blazor\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Home.razor",
               "RelativeToolTip": "Blazor\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-20T19:39:37.478Z",
+              "WhenOpened": "2025-11-25T17:27:46.242Z",
               "EditorCaption": ""
             }
           ]

@@ -1,8 +1,8 @@
 ﻿@page "/products"
 
-<PageTitle>Products</PageTitle>
-
 @using Blazor.Data
+
+<PageTitle>Products</PageTitle>
 
 <h1>All products</h1>
 
@@ -10,13 +10,20 @@
     @foreach (var p in ProductStore.Products)
     {
         <li>
-            <h3>@p.Name</h3>
-            <p>@p.ShortDescription</p>
-            <NavLink href="@($"/product/{p.Id}")">See more</NavLink>
+            <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+                <div>
+                    <h3>@p.Name</h3>
+                    <p>@p.ShortDescription</p>
+                </div>
+                <div style="display:flex;gap:0.5rem;align-items:center;">
+                    <NavLink class="btn" href="@($"/product/{p.Id}")">See more</NavLink>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
         </li>
     }
 </ul>
 
 @code {
-
+   
 }
