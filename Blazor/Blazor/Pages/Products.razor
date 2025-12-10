@@ -1,6 +1,7 @@
 ﻿@page "/products"
 
 @using Blazor.Data
+@inject CartService CartService
 
 <PageTitle>Products</PageTitle>
 
@@ -9,6 +10,7 @@
 <ul class="product-list">
     @foreach (var p in ProductStore.Products)
     {
+        @* Trzeba dodać wyszukiwarkę produktów *@
         <li>
             <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
                 <div>
@@ -17,7 +19,7 @@
                 </div>
                 <div style="display:flex;gap:0.5rem;align-items:center;">
                     <NavLink class="btn" href="@($"/product/{p.Id}")">See more</NavLink>
-                    <button class="btn">Add to cart</button>
+                    <button class="btn" @onclick="() => AddToCart(p)">Add to cart</button>
                 </div>
             </div>
         </li>
@@ -25,5 +27,5 @@
 </ul>
 
 @code {
-   
+   private void AddToCart(Product p) => CartService.Add(p);
 }

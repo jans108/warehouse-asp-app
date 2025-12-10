@@ -2,6 +2,7 @@
 
 @using Blazor.Data
 @using Microsoft.AspNetCore.Components
+@inject CartService CartService
 
 <PageTitle>Product Details</PageTitle>
 
@@ -14,7 +15,36 @@
     {
         product = ProductStore.Products.Find(p => p.Id == id);
     }
+
+    private void AddToCart()
+    {
+        if (product is null) return;
+        CartService.Add(product);
+        message = $"{product.Name} was added to the cart.";
+    }
 }
-    <div>
-        <NavLink href="/products" style="display:block;margin-top:1rem;">Return</NavLink>
+
+@if (product == null)
+{
+    <h2>Product not found</h2>
+    <NavLink href="/products">Return</NavLink>
+}
+else
+{
+    <div class="product-details">
+        <h1>@product.Name</h1>
+        <p>@product.Description</p>
+        <p class="product-price"><strong>Price:</strong> @product.Price.ToString("C")</p>
+
+        <div style="display:flex;gap:0.5rem;align-items:center;">
+            <button class="btn" @onclick="AddToCart">Add to cart</button>
+            <NavLink class="btn" href="/products">Return</NavLink>
+        </div>
+
+        @if (!string.IsNullOrEmpty(message))
+        {
+            <div style="margin-top:0.75rem;">@message</div>
+        }
+
     </div>
+}

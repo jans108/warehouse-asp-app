@@ -1,8 +1,96 @@
 ﻿@page "/shopping_cart"
 
 @using Blazor.Data
+@using System.Linq
+@inject CartService CartService
 
 <PageTitle>Shopping Cart</PageTitle>
 
-<h1>Your shopping cart</h1>
+<div class="shopping-cart">
+    <h1>Your shopping cart</h1>
+
+    @if (!CartService.Items.Any())
+    {
+        <p>Your cart is empty. <NavLink href="/products">Browse products</NavLink></p>
+    }
+    else
+    {
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th class="col-price">Price</th>
+                    <th class="col-qty">Quantity</th>
+                    <th class="col-sub">Subtotal</th>
+                    <th class="col-actions"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in CartService.Items)
+                {
+                    <tr>
+                        <td>
+                            <strong>@item.Product.Name</strong><br />
+                            <small class="muted">@item.Product.ShortDescription</small>
+                        </td>
+                        <td class="col-price">@item.Product.Price.ToString("C")</td>
+                        <td class="col-qty">
+                            <div class="qty-controls">
+                                <button class="btn qty-btn" @onclick="() => Decrease(item.Product.Id)">-</button>
+                                <div class="qty-value">@item.Quantity</div>
+                                <button class="btn qty-btn" @onclick="() => Increase(item.Product.Id)">+</button>
+                            </div>
+                        </td>
+                        <td class="col-sub">@($"${(item.Product.Price * item.Quantity)}")</td>
+                        <td class="col-actions">
+                            <button class="btn action-btn" @onclick="() => Remove(item.Product.Id)">Remove</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="total-label">Total:</td>
+                    <td class="total-value">@CartService.Total().ToString("C")</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="cart-actions">
+            <button class="btn action-btn" @onclick="Clear">Clear cart</button>
+            @* Można dodać funkcje płatności lub kupowania *@
+            <button class="btn action-btn">Buy now</button>
+        </div>
+    }
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        CartService.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        CartService.OnChange -= StateHasChanged;
+    }
+
+    private void Increase(int productId)
+    {
+        var item = CartService.Items.FirstOrDefault(i => i.Product.Id == productId);
+        if (item is not null) CartService.UpdateQuantity(productId, item.Quantity + 1);
+    }
+
+    private void Decrease(int productId)
+    {
+        var item = CartService.Items.FirstOrDefault(i => i.Product.Id == productId);
+        if (item is not null) CartService.UpdateQuantity(productId, item.Quantity - 1);
+    }
+
+    private void Remove(int productId) => CartService.Remove(productId);
+    private void Clear() => CartService.Clear();
+}
 
