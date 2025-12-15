@@ -31,19 +31,19 @@
                     <tr>
                         <td>
                             <strong>@item.Product.Name</strong><br />
-                            <small class="muted">@item.Product.ShortDescription</small>
+                            <small class="muted">@item.Product.Description</small>
                         </td>
                         <td class="col-price">@item.Product.Price.ToString("C")</td>
                         <td class="col-qty">
                             <div class="qty-controls">
-                                <button class="btn qty-btn" @onclick="() => Decrease(item.Product.Id)">-</button>
+                                <button class="btn qty-btn" @onclick="() => Decrease(item.Product.ProductId)">-</button>
                                 <div class="qty-value">@item.Quantity</div>
-                                <button class="btn qty-btn" @onclick="() => Increase(item.Product.Id)">+</button>
+                                <button class="btn qty-btn" @onclick="() => Increase(item.Product.ProductId)">+</button>
                             </div>
                         </td>
                         <td class="col-sub">@($"${(item.Product.Price * item.Quantity)}")</td>
                         <td class="col-actions">
-                            <button class="btn action-btn" @onclick="() => Remove(item.Product.Id)">Remove</button>
+                            <button class="btn action-btn" @onclick="() => Remove(item.Product.ProductId)">Remove</button>
                         </td>
                     </tr>
                 }
@@ -80,13 +80,13 @@
 
     private void Increase(int productId)
     {
-        var item = CartService.Items.FirstOrDefault(i => i.Product.Id == productId);
+        var item = CartService.Items.FirstOrDefault(i => i.Product.ProductId == productId);
         if (item is not null) CartService.UpdateQuantity(productId, item.Quantity + 1);
     }
 
     private void Decrease(int productId)
     {
-        var item = CartService.Items.FirstOrDefault(i => i.Product.Id == productId);
+        var item = CartService.Items.FirstOrDefault(i => i.Product.ProductId == productId);
         if (item is not null) CartService.UpdateQuantity(productId, item.Quantity - 1);
     }
 

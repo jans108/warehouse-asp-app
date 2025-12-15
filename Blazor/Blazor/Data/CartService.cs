@@ -21,7 +21,7 @@ public sealed class CartService
     public void Add(Product product, int quantity = 1)
     {
         if (product is null) return;
-        var item = _items.FirstOrDefault(i => i.Product.Id == product.Id);
+        var item = _items.FirstOrDefault(i => i.Product.ProductId == product.ProductId);
         if (item is null)
         {
             _items.Add(new CartItem { Product = product, Quantity = Math.Max(1, quantity) });
@@ -35,7 +35,7 @@ public sealed class CartService
 
     public void Remove(int productId)
     {
-        var item = _items.FirstOrDefault(i => i.Product.Id == productId);
+        var item = _items.FirstOrDefault(i => i.Product.ProductId == productId);
         if (item is not null)
         {
             _items.Remove(item);
@@ -45,7 +45,7 @@ public sealed class CartService
 
     public void UpdateQuantity(int productId, int quantity)
     {
-        var item = _items.FirstOrDefault(i => i.Product.Id == productId);
+        var item = _items.FirstOrDefault(i => i.Product.ProductId == productId);
         if (item is not null)
         {
             if (quantity <= 0) _items.Remove(item);

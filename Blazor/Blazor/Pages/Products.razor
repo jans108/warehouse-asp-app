@@ -1,31 +1,50 @@
 ﻿@page "/products"
 
 @using Blazor.Data
+@using Blazor.Services
 @inject CartService CartService
+@inject ProductService ProductService
 
 <PageTitle>Products</PageTitle>
 
 <h1>All products</h1>
 
-<ul class="product-list">
-    @foreach (var p in ProductStore.Products)
-    {
-        @* Trzeba dodać wyszukiwarkę produktów *@
-        <li>
-            <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
-                <div>
-                    <h3>@p.Name</h3>
-                    <p>@p.ShortDescription</p>
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (products.Count == 0)
+{
+    <p>No products available.</p>
+}
+else
+{
+    <ul class="product-list">
+        @foreach (var p in products)
+        {
+            <li>
+                <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+                    <div>
+                        <h3>@p.Name</h3>
+                        <p>@p.Description</p>
+                    </div>
+                    <div style="display:flex;gap:0.5rem;align-items:center;">
+                        <NavLink class="btn" href="@($"/product/{p.ProductId}")">See more</NavLink>
+                        <button class="btn" @onclick="() => AddToCart(p)">Add to cart</button>
+                    </div>
                 </div>
-                <div style="display:flex;gap:0.5rem;align-items:center;">
-                    <NavLink class="btn" href="@($"/product/{p.Id}")">See more</NavLink>
-                    <button class="btn" @onclick="() => AddToCart(p)">Add to cart</button>
-                </div>
-            </div>
-        </li>
-    }
-</ul>
+            </li>
+        }
+    </ul>
+}
 
 @code {
-   private void AddToCart(Product p) => CartService.Add(p);
+    private List<Product>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProductsAsync();
+    }
+
+    private void AddToCart(Product p) => CartService.Add(p);
 }

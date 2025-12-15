@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\vixeg\\onedrive\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\pages\\productdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\productdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\vixeg\\onedrive\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\vixeg\\onedrive\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\vixeg\\onedrive\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\data\\productstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\data\\productstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\vixeg\\onedrive\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\vixeg\\onedrive\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\data\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\data\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductDetails.razor",
+              "DocumentMoniker": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\ProductDetails.razor",
+              "RelativeDocumentMoniker": "Blazor\\Pages\\ProductDetails.razor",
+              "ToolTip": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\ProductDetails.razor",
+              "RelativeToolTip": "Blazor\\Pages\\ProductDetails.razor",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T14:56:46.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Blazor\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\Home.razor",
+              "RelativeToolTip": "Blazor\\Pages\\Home.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T14:56:25.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Data\\CartService.cs",
+              "RelativeDocumentMoniker": "Blazor\\Data\\CartService.cs",
+              "ToolTip": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Data\\CartService.cs",
+              "RelativeToolTip": "Blazor\\Data\\CartService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:54:10.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Program.cs",
+              "RelativeDocumentMoniker": "Blazor\\Program.cs",
+              "ToolTip": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Program.cs",
+              "RelativeToolTip": "Blazor\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:53:52.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Blazor\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Services\\ProductService.cs",
+              "RelativeToolTip": "Blazor\\Services\\ProductService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDMAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:53:28.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductStore.cs",
+              "DocumentMoniker": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Data\\ProductStore.cs",
+              "RelativeDocumentMoniker": "Blazor\\Data\\ProductStore.cs",
+              "ToolTip": "C:\\Users\\vixeg\\OneDrive\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Data\\ProductStore.cs",
+              "RelativeToolTip": "Blazor\\Data\\ProductStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:52:31.993Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

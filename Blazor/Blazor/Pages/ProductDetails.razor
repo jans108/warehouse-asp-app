@@ -1,8 +1,10 @@
 ﻿@page "/product/{id:int}"
 
 @using Blazor.Data
+@using Blazor.Services
 @using Microsoft.AspNetCore.Components
 @inject CartService CartService
+@inject ProductService ProductService
 
 <PageTitle>Product Details</PageTitle>
 
@@ -10,10 +12,21 @@
     [Parameter] public int id { get; set; }
     private Product? product;
     private string? message;
+    private bool isLoading = true;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        product = ProductStore.Products.Find(p => p.Id == id);
+        try
+        {
+            var products = await ProductService.GetProductsAsync();
+            product = products.FirstOrDefault(p => p.ProductId == id);
+            isLoading = false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading product: {ex.Message}");
+            isLoading = false;
+        }
     }
 
     private void AddToCart()
@@ -24,7 +37,11 @@
     }
 }
 
-@if (product == null)
+@if (isLoading)
+{
+    <p><em>Loading product...</em></p>
+}
+else if (product == null)
 {
     <h2>Product not found</h2>
     <NavLink href="/products">Return</NavLink>
@@ -34,10 +51,14 @@ else
     <div class="product-details">
         <h1>@product.Name</h1>
         <p>@product.Description</p>
+        <p><strong>SKU:</strong> @product.SKU</p>
+        <p><strong>Stock:</strong> @product.StockQuantity units</p>
         <p class="product-price"><strong>Price:</strong> @product.Price.ToString("C")</p>
 
         <div style="display:flex;gap:0.5rem;align-items:center;">
-            <button class="btn" @onclick="AddToCart">Add to cart</button>
+            <button class="btn" @onclick="AddToCart" disabled="@(product.StockQuantity <= 0)">
+                @(product.StockQuantity > 0 ? "Add to cart" : "Out of stock")
+            </button>
             <NavLink class="btn" href="/products">Return</NavLink>
         </div>
 
@@ -45,6 +66,5 @@ else
         {
             <div style="margin-top:0.75rem;">@message</div>
         }
-
     </div>
 }

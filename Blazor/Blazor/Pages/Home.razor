@@ -1,26 +1,42 @@
 ﻿@page "/"
 
 @using Blazor.Data
+@using Blazor.Services
 @inject CartService CartService
+@inject ProductService ProductService
 
 <PageTitle>Home</PageTitle>
 
 <h1>Welcome to our store</h1>
 
-<div class="product-windows">
-    @foreach (var p in ProductStore.Products)
-    {
-        <div class="product-window">
-            <h2>@p.Name</h2>
-            <p>@p.ShortDescription</p>
-            <div style="display:flex;gap:0.5rem;">
-                <NavLink class="btn" href=@($"/product/{p.Id}")>See more</NavLink>
-                <button class="btn" @onclick="() => AddToCart(p)">Add to cart</button>
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="product-windows">
+        @foreach (var p in products)
+        {
+            <div class="product-window">
+                <h2>@p.Name</h2>
+                <p>@p.Description</p>
+                <div style="display:flex;gap:0.5rem;">
+                    <NavLink class="btn" href=@($"/product/{p.ProductId}")>See more</NavLink>
+                    <button class="btn" @onclick="() => AddToCart(p)">Add to cart</button>
+                </div>
             </div>
-        </div>
-    }
-</div>
+        }
+    </div>
+}
 
 @code {
+    private List<Product>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProductsAsync();
+    }
+
     private void AddToCart(Product p) => CartService.Add(p);
 }
