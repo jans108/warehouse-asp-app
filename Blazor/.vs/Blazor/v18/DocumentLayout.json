@@ -115,8 +115,7 @@
               "RelativeToolTip": "Blazor\\Pages\\Home.razor",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-14T14:56:25.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:56:25.502Z"
             },
             {
               "$type": "Document",
@@ -128,8 +127,7 @@
               "RelativeToolTip": "Blazor\\Data\\CartService.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:54:10.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:54:10.751Z"
             },
             {
               "$type": "Document",
@@ -141,8 +139,7 @@
               "RelativeToolTip": "Blazor\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:53:52.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:53:52.132Z"
             },
             {
               "$type": "Document",
@@ -154,8 +151,7 @@
               "RelativeToolTip": "Blazor\\Services\\ProductService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwDMAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:53:28.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:53:28.616Z"
             },
             {
               "$type": "Document",
@@ -167,8 +163,7 @@
               "RelativeToolTip": "Blazor\\Data\\ProductStore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:52:31.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:52:31.993Z"
             }
           ]
         }
