@@ -1,0 +1,148 @@
+@page "/add-product"
+@using Blazor.Data
+@using Blazor.Services
+@using System.ComponentModel.DataAnnotations
+@inject ProductService ProductService
+@inject NavigationManager Navigation
+
+<PageTitle>Add Product</PageTitle>
+
+<div class="add-product-container">
+    <h1>Add New Product</h1>
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success">@successMessage</div>
+    }
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-error">@errorMessage</div>
+    }
+
+    <EditForm Model="@model" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <InputText id="name" class="form-control" @bind-Value="model.Name" placeholder="Enter product name" />
+            <ValidationMessage For="@(() => model.Name)" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputTextArea id="description" class="form-control" @bind-Value="model.Description" placeholder="Enter product description" rows="3" />
+            <ValidationMessage For="@(() => model.Description)" />
+        </div>
+
+        <div class="form-group">
+            <label for="sku">SKU</label>
+            <InputText id="sku" class="form-control" @bind-Value="model.SKU" placeholder="Enter SKU (e.g., SKU001)" />
+            <ValidationMessage For="@(() => model.SKU)" />
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <InputNumber id="price" class="form-control" @bind-Value="model.Price" placeholder="0.00" />
+            <ValidationMessage For="@(() => model.Price)" />
+        </div>
+
+        <div class="form-group">
+            <label for="stock">Stock Quantity</label>
+            <InputNumber id="stock" class="form-control" @bind-Value="model.StockQuantity" placeholder="0" />
+            <ValidationMessage For="@(() => model.StockQuantity)" />
+        </div>
+
+        <div class="form-group">
+            <label>
+                <InputCheckbox @bind-Value="model.IsActive" />
+                Is Active
+            </label>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" disabled="@isSubmitting">
+                @(isSubmitting ? "Adding..." : "Add Product")
+            </button>
+            <NavLink class="btn btn-secondary" href="/products">Cancel</NavLink>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private ProductModel model = new();
+    private string? successMessage;
+    private string? errorMessage;
+    private bool isSubmitting = false;
+
+    private async Task HandleValidSubmit()
+    {
+        isSubmitting = true;
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var product = new Product
+            {
+                Name = model.Name,
+                Description = model.Description,
+                SKU = model.SKU,
+                Price = model.Price,
+                StockQuantity = model.StockQuantity,
+                IsActive = model.IsActive,
+                //CreatedAt = DateTime.UtcNow
+            };
+
+            var success = await ProductService.AddProductAsync(product);
+
+            if (success)
+            {
+                successMessage = "Product added successfully!";
+                model = new ProductModel(); // Reset form
+                
+                // Redirect to products page after 2 seconds
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/products");
+            }
+            else
+            {
+                errorMessage = "Failed to add product. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+            Console.WriteLine($"AddProduct error: {ex}");
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+    public class ProductModel
+    {
+        [Required(ErrorMessage = "Product name is required")]
+        [StringLength(200, ErrorMessage = "Name must be less than 200 characters")]
+        public string Name { get; set; } = "";
+
+        [StringLength(1000, ErrorMessage = "Description must be less than 1000 characters")]
+        public string? Description { get; set; }
+
+        [Required(ErrorMessage = "SKU is required")]
+        [StringLength(50, ErrorMessage = "SKU must be less than 50 characters")]
+        public string SKU { get; set; } = "";
+
+        [Required(ErrorMessage = "Price is required")]
+        [Range(0.01, 999999.99, ErrorMessage = "Price must be between 0.01 and 999999.99")]
+        public decimal Price { get; set; }
+
+        [Required(ErrorMessage = "Stock quantity is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "Stock quantity must be non-negative")]
+        public int StockQuantity { get; set; }
+
+        public bool IsActive { get; set; } = true;
+    }
+}

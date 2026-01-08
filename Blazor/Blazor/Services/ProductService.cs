@@ -17,17 +17,21 @@ public class ProductService
         _httpClient = httpClient;
     }
 
-    public async Task<List<Product>> GetProductsAsync()
+    public async Task<List<Product>> GetProductsAsync(string? searchTerm = null)
     {
         try
         {
-            Console.WriteLine("ProductService: Starting GetProductsAsync");
-            Console.WriteLine($"ProductService: Using base address: {_httpClient.BaseAddress}");
+            var url = "api/products";
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                url += $"?search={Uri.EscapeDataString(searchTerm)}";
+            }
+
+            Console.WriteLine($"ProductService: Fetching products with URL: {url}");
             
-            var response = await _httpClient.GetAsync("api/products");
+            var response = await _httpClient.GetAsync(url);
             
             Console.WriteLine($"ProductService: Response status code: {response.StatusCode}");
-            Console.WriteLine($"ProductService: Response content type: {response.Content.Headers.ContentType}");
             
             if (!response.IsSuccessStatusCode)
             {
@@ -37,14 +41,10 @@ public class ProductService
             }
 
             var content = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"ProductService: Raw response content: {content}");
-            Console.WriteLine($"ProductService: Content length: {content.Length}");
             
-            // Check if content is HTML (error page)
             if (content.TrimStart().StartsWith("<"))
             {
                 Console.WriteLine("ProductService: Response is HTML, not JSON!");
-                Console.WriteLine($"ProductService: HTML content: {content}");
                 return new List<Product>();
             }
             
@@ -56,9 +56,34 @@ public class ProductService
         catch (Exception ex)
         {
             Console.WriteLine($"ProductService: Exception occurred: {ex.Message}");
-            Console.WriteLine($"ProductService: Exception type: {ex.GetType().Name}");
-            Console.WriteLine($"ProductService: Stack Trace: {ex.StackTrace}");
             return new List<Product>();
+        }
+    }
+
+    public async Task<bool> AddProductAsync(Product product)
+    {
+        try
+        {
+            Console.WriteLine($"ProductService: Adding product: {product.Name}");
+            
+            var response = await _httpClient.PostAsJsonAsync("api/products", product, JsonOptions);
+            
+            Console.WriteLine($"ProductService: Add product response status: {response.StatusCode}");
+            
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"ProductService: Add product failed: {errorContent}");
+                return false;
+            }
+
+            Console.WriteLine("ProductService: Product added successfully");
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ProductService: Error adding product: {ex.Message}");
+            return false;
         }
     }
 }

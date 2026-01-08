@@ -7,11 +7,38 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Welcome to our store</h1>
+<div class="home-header">
+    <h1>Welcome to our store</h1>
+    
+    <div class="search-container">
+        <input type="text" 
+               class="search-input" 
+               placeholder="Search products..." 
+               @bind="searchTerm" 
+               @bind:event="oninput"
+               @onkeyup="OnSearchChanged" />
+        @if (!string.IsNullOrWhiteSpace(searchTerm))
+        {
+            <button class="clear-search-btn" @onclick="ClearSearch" title="Clear search">✕</button>
+        }
+    </div>
+</div>
 
 @if (products == null)
 {
     <p><em>Loading...</em></p>
+}
+else if (products.Count == 0)
+{
+    @if (string.IsNullOrWhiteSpace(searchTerm))
+    {
+        <p>No products available.</p>
+    }
+    else
+    {
+        <p>No products found matching "<strong>@searchTerm</strong>".</p>
+        <button class="btn" @onclick="ClearSearch">Clear search</button>
+    }
 }
 else
 {
@@ -32,11 +59,42 @@ else
 
 @code {
     private List<Product>? products;
+    private string searchTerm = "";
+    private System.Threading.Timer? debounceTimer;
 
     protected override async Task OnInitializedAsync()
     {
-        products = await ProductService.GetProductsAsync();
+        await LoadProducts();
+    }
+
+    private async Task LoadProducts()
+    {
+        products = await ProductService.GetProductsAsync(string.IsNullOrWhiteSpace(searchTerm) ? null : searchTerm);
+    }
+
+    private void OnSearchChanged()
+    {
+        debounceTimer?.Dispose();
+        debounceTimer = new System.Threading.Timer(async _ =>
+        {
+            await InvokeAsync(async () =>
+            {
+                await LoadProducts();
+                StateHasChanged();
+            });
+        }, null, 300, Timeout.Infinite);
+    }
+
+    private async Task ClearSearch()
+    {
+        searchTerm = "";
+        await LoadProducts();
     }
 
     private void AddToCart(Product p) => CartService.Add(p);
+
+    public void Dispose()
+    {
+        debounceTimer?.Dispose();
+    }
 }
