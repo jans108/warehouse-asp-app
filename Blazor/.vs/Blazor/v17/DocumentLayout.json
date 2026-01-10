@@ -1,12 +1,71 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\warehouse-asp-app\\Blazor\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\akinya\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\akinya\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|c:\\users\\akinya\\documents\\github\\warehouse-asp-app\\blazor\\blazor\\pages\\about.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14DCC3B2-5720-4ECE-939E-375422C18D16}|Blazor\\Blazor.csproj|solutionrelative:blazor\\pages\\about.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Blazor\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Blazor\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-10T15:07:37.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Blazor\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Blazor\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-10T15:05:03.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "About.razor",
+              "DocumentMoniker": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\About.razor",
+              "RelativeDocumentMoniker": "Blazor\\Pages\\About.razor",
+              "ToolTip": "C:\\Users\\Akinya\\Documents\\GitHub\\warehouse-asp-app\\Blazor\\Blazor\\Pages\\About.razor",
+              "RelativeToolTip": "Blazor\\Pages\\About.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-10T15:04:18.025Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

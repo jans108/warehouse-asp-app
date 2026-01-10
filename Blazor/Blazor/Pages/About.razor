@@ -1,0 +1,46 @@
+﻿@page "/about"
+
+<h1 class="about-title">Twórcy projektu</h1>
+<div class="about-container">
+    <div class="about-card">
+        <h2>Wiktor Barczyk</h2>
+    </div>
+    <div class="about-card">
+        <h2>Maciej Broda</h2>
+    </div>
+    <div class="about-card">
+        <h2>Joanna Dolaś</h2>
+    </div>
+    <div class="about-card">
+        <h2>Damian Kokoszyński</h2>
+    </div>
+</div>
+
+<style>
+    .about-title {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: #2c3e50;
+    }
+    .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .about-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 1.5rem 2rem;
+        text-align: center;
+        width: 240px;
+        transition: transform 0.2s;
+    }
+    .about-card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+</style>
